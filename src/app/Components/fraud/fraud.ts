@@ -12,7 +12,7 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./fraud.css']
 })
 export class FraudComponent {
-
+  
   fraudId!: number;
   fraud: Fraud | null = null;
 
