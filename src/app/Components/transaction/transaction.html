@@ -1,0 +1,25 @@
+<h2>Transfer Money</h2>
+
+<div class="card">
+
+  <input 
+    type="number" 
+    [(ngModel)]="transferData.fromAccountId" 
+    placeholder="From Account ID" 
+  />
+
+  <input 
+    type="number" 
+    [(ngModel)]="transferData.toAccountId" 
+    placeholder="To Account ID" 
+  />
+
+  <input 
+    type="number" 
+    [(ngModel)]="transferData.amount" 
+    placeholder="Amount" 
+  />
+
+  <button (click)="transfer()">Send Money</button>
+
+</div>

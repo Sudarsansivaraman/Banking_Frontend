@@ -1,0 +1,32 @@
+<h2>Account Module</h2>
+
+<!--  Get Account -->
+<div class="card">
+  <h3>Get Account</h3>
+
+  <input type="number" [(ngModel)]="userId" placeholder="Enter User ID" />
+  <button (click)="getAccount()">Get Account</button>
+</div>
+
+<hr>
+
+<!--  Create Account -->
+<div class="card">
+  <h3>Create Account</h3>
+
+  <input type="number" [(ngModel)]="newAccount.userId" placeholder="User ID" />
+  <input type="number" [(ngModel)]="newAccount.initialBalance" placeholder="Initial Balance" />
+
+  <button (click)="createAccount()">Create</button>
+</div>
+
+<hr>
+
+<!--  Display Account -->
+<div *ngIf="account" class="card">
+  <h3>Account Details</h3>
+
+  <p><strong>ID:</strong> {{account.id}}</p>
+  <p><strong>User ID:</strong> {{account.userId}}</p>
+  <p><strong>Balance:</strong> ₹{{account.balance}}</p>
+</div>

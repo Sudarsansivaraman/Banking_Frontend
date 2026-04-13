@@ -1,0 +1,20 @@
+<h2>Fraud Details</h2>
+
+<div class="card">
+  <input 
+    type="number" 
+    [(ngModel)]="fraudId" 
+    placeholder="Enter Fraud ID" 
+  />
+
+  <button (click)="getFraud()">Get Fraud</button>
+</div>
+
+<!-- x Display -->
+<div *ngIf="fraud" class="card">
+  <p><strong>ID:</strong> {{fraud.id}}</p>
+  <p><strong>Transaction ID:</strong> {{fraud.transactionId}}</p>
+  <p><strong>Reason:</strong> {{fraud.reason}}</p>
+  <p><strong>Risk Score:</strong> {{fraud.riskScore}}</p>
+  <p><strong>Created At:</strong> {{fraud.createdAt | date:'medium'}}</p>
+</div>
